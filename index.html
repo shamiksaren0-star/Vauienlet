@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vauienlet Studios | Game Development Portfolio</title>
+
+    <meta name="description"
+          content="Vauienlet Studios - Independent game development portfolio showcasing Unity, C, C#, gameplay programming, and game prototypes.">
+
+    <meta name="theme-color" content="#0b1020">
+
+    <style>
+        /* GENERAL STYLING */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1020;
+            color: #f1f5f9;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #bfdbfe;
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            color: #94a3b8;
+            max-width: 720px;
+            margin-bottom: 35px;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 16, 32, 0.96);
+            border-bottom: 1px solid #26334d;
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(37, 99, 235, 0.24),
+                    transparent 35%
+                ),
+                linear-gradient(135deg, #11182b, #0b1020);
+        }
+
+        .hero-content {
+            padding: 100px 0;
+        }
+
+        .eyebrow {
+            color: #60a5fa;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 76px);
+            line-height: 1.12;
+            margin: 22px 0;
+            max-width: 900px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero-description {
+            max-width: 680px;
+            font-size: 17px;
+            color: #cbd5e1;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 6px;
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: bold;
+            border: 1px solid #2563eb;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+            color: #ffffff;
+        }
+
+        .button-outline {
+            background: transparent;
+            border-color: #475569;
+        }
+
+        .button-outline:hover {
+            background: #172033;
+        }
+
+        /* ABOUT SECTION */
+
+        .about {
+            background: #0f172a;
+        }
+
+        .about-content {
+            max-width: 850px;
+            color: #cbd5e1;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+        /* SKILLS SECTION */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 18px;
+        }
+
+        .skill-card {
+            padding: 24px;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            background: #11182b;
+        }
+
+        .skill-card h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+            color: #93c5fd;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .skill-tag {
+            padding: 8px 14px;
+            border: 1px solid #334155;
+            border-radius: 5px;
+            background: #172033;
+            color: #bfdbfe;
+            font-size: 14px;
+        }
+
+        /* PROJECTS SECTION */
+
+        .projects {
+            background: #0f172a;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
+            gap: 24px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            background: #172033;
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: #60a5fa;
+        }
+
+        .project-status {
+            align-self: flex-start;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: #1e3a5f;
+            color: #bfdbfe;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .project-tech {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            margin-top: auto;
+            padding-top: 8px;
+            font-weight: bold;
+        }
+
+        /* GAME JAM SECTION */
+
+        .experience-card {
+            padding: 30px;
+            max-width: 850px;
+            background: #11182b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+        }
+
+        .experience-card h3 {
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .experience-card p {
+            color: #cbd5e1;
+            margin-bottom: 12px;
+        }
+
+        /* EDUCATION SECTION */
+
+        .education-card {
+            padding: 26px;
+            background: #11182b;
+            border-left: 4px solid #3b82f6;
+            border-radius: 6px;
+            max-width: 850px;
+            margin-bottom: 20px;
+        }
+
+        .education-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #94a3b8;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact {
+            background: #0f172a;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            padding: 32px;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            background: #172033;
+        }
+
+        .contact-box p {
+            margin-bottom: 14px;
+            color: #cbd5e1;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 28px 0;
+            border-top: 1px solid #26334d;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .navbar {
+                padding: 18px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 85px 0;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .contact-box {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="container navbar">
+
+            <a class="logo" href="#home">
+                VAUIENLET STUDIOS
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    Independent Game Development
+                </p>
+
+                <h1>
+                    Vauienlet Studios<br>
+                    <span>Building Interactive Experiences.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Welcome to my game development portfolio.
+                    I am an independent developer working with
+                    C, C#, and Unity to explore gameplay programming,
+                    interactive mechanics, and game prototyping.
+                </p>
+
+                <div class="button-group">
+
+                    <a class="button" href="#projects">
+                        Explore My Projects
+                    </a>
+
+                    <a
+                        class="button button-outline"
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+
+        <section class="section about" id="about">
+            <div class="container">
+
+                <h2 class="section-title">
+                    About Me
+                </h2>
+
+                <p class="section-description">
+                    My background, interests, and approach to
+                    independent game development.
+                </p>
+
+                <div class="about-content">
+
+                    <p>
+                        I am an independent game developer and the
+                        founder of Vauienlet Studios, an independent
+                        game development brand focused on creating
+                        interactive software and games.
+                    </p>
+
+                    <p>
+                        My technical interests include C programming,
+                        C# programming, Unity game development,
+                        gameplay mechanics, player controls,
+                        projectile-based combat, and enemy behaviour.
+                    </p>
+
+                    <p>
+                        I have developed independent game projects
+                        and prototypes while learning to implement
+                        gameplay systems, troubleshoot code, and
+                        improve my development workflow.
+                    </p>
+
+                    <p>
+                        I am currently pursuing a Diploma in Game
+                        Development at Red Apple Learning.
+                        I am continuing to strengthen my programming
+                        fundamentals and practical development skills.
+                    </p>
+
+                    <p>
+                        My long-term goal is to become a hybrid
+                        developer who can contribute to programming
+                        and collaborate across creative and technical
+                        disciplines in the game and software industries.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+
+        <section class="section" id="skills">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Technical Skills
+                </h2>
+
+                <p class="section-description">
+                    Programming languages, tools, and gameplay
+                    systems I have studied and practiced.
+                </p>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <h3>C Programming</h3>
+
+                        <p>
+                            Programming fundamentals, variables,
+                            functions, control flow, and problem-solving
+                            practice.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>C# Programming</h3>
+
+                        <p>
+                            Unity scripting, gameplay logic,
+                            movement controls, and basic game systems.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Unity Engine</h3>
+
+                        <p>
+                            Game prototyping, scene setup,
+                            components, prefabs, and gameplay
+                            implementation.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Gameplay Systems</h3>
+
+                        <p>
+                            Player movement, projectile shooting,
+                            enemy health, collision handling,
+                            and gameplay mechanics.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>AI Navigation</h3>
+
+                        <p>
+                            Learning NavMesh concepts, navigation
+                            surfaces, pathfinding, and enemy
+                            movement behaviour.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Visual Effects</h3>
+
+                        <p>
+                            Exploring Unity particle systems,
+                            existing VFX assets, animation,
+                            and visual presentation.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="skill-tags">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Unity</span>
+                    <span class="skill-tag">Game Prototyping</span>
+                    <span class="skill-tag">Gameplay Programming</span>
+                    <span class="skill-tag">2D Games</span>
+                    <span class="skill-tag">3D Game Fundamentals</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section class="section projects" id="projects">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Featured Projects
+                </h2>
+
+                <p class="section-description">
+                    Independent games, gameplay experiments,
+                    and prototypes. Project pages and playable
+                    builds will be linked here as they become available.
+                </p>
+
+                <div class="project-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card">
+
+                        <span class="project-status">
+                            Game Jam Prototype
+                        </span>
+
+                        <h3>Last Light</h3>
+
+                        <p>
+                            A space-game project developed as part
+                            of a collaborative game jam. My role
+                            involved programming with C#.
+                        </p>
+
+                        <p>
+                            The project provided experience in
+                            collaborative development and implementing
+                            gameplay ideas under time constraints.
+                        </p>
+
+                        <div class="project-tech">
+                            Technology: Unity and C#
+                        </div>
+
+                        <a
+                            class="project-link"
+                            href="https://itch.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Project page to be added
+                        </a>
+
+                    </article>
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card">
+
+                        <span class="project-status">
+                            Independent Project
+                        </span>
+
+                        <h3>Pikachu Climb</h3>
+
+                        <p>
+                            A 2D climbing game prototype in which
+                            a character moves across different
+                            terrain, inspired by hill-climbing
+                            gameplay.
+                        </p>
+
+                        <p>
+                            The project explores character movement,
+                            terrain interaction, and 2D gameplay.
+                        </p>
+
+                        <div class="project-tech">
+                            Technology: Unity and C#
+                        </div>
+
+                        <a
+                            class="project-link"
+                            href="https://itch.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Project page to be added
+                        </a>
+
+                    </article>
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card">
+
+                        <span class="project-status">
+                            Learning Project
+                        </span>
+
+                        <h3>Spike Avoidance Game</h3>
+
+                        <p>
+                            A personal learning project inspired
+                            by an existing spike-avoidance arcade
+                            game. Developed to practice gameplay
+                            implementation and game mechanics.
+                        </p>
+
+                        <p>
+                            This is a learning project and is not
+                            presented as an official release or
+                            affiliation with the original developer.
