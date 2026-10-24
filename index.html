@@ -7,13 +7,11 @@
     <title>Vauienlet Studios | Game Development Portfolio</title>
 
     <meta name="description"
-          content="Vauienlet Studios - Independent game development portfolio showcasing Unity, C, C#, gameplay programming, and game prototypes.">
+          content="Independent game development portfolio showcasing Unity, C#, gameplay programming, game prototypes, and visual effects.">
 
     <meta name="theme-color" content="#0b1020">
 
     <style>
-        /* GENERAL STYLING */
-
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +20,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 90px;
+            scroll-padding-top: 100px;
         }
 
         body {
@@ -91,7 +89,7 @@
 
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
@@ -104,7 +102,7 @@
             color: #60a5fa;
         }
 
-        /* HERO SECTION */
+        /* HERO */
 
         .hero {
             min-height: 560px;
@@ -179,7 +177,7 @@
             background: #172033;
         }
 
-        /* ABOUT SECTION */
+        /* ABOUT */
 
         .about {
             background: #0f172a;
@@ -194,7 +192,7 @@
             margin-bottom: 18px;
         }
 
-        /* SKILLS SECTION */
+        /* SKILLS */
 
         .skills-grid {
             display: grid;
@@ -239,7 +237,7 @@
             font-size: 14px;
         }
 
-        /* PROJECTS SECTION */
+        /* PROJECTS */
 
         .projects {
             background: #0f172a;
@@ -261,9 +259,8 @@
             border: 1px solid #334155;
             border-radius: 10px;
             background: #172033;
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease;
+            transition: transform 0.2s ease,
+                        border-color 0.2s ease;
         }
 
         .project-card:hover {
@@ -304,31 +301,16 @@
             font-weight: bold;
         }
 
-        /* GAME JAM SECTION */
+        /* EDUCATION */
 
-        .experience-card {
-            padding: 30px;
-            max-width: 850px;
-            background: #11182b;
-            border: 1px solid #334155;
-            border-radius: 10px;
+        .education {
+            background: #0b1020;
         }
-
-        .experience-card h3 {
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .experience-card p {
-            color: #cbd5e1;
-            margin-bottom: 12px;
-        }
-
-        /* EDUCATION SECTION */
 
         .education-card {
             padding: 26px;
             background: #11182b;
+            border: 1px solid #334155;
             border-left: 4px solid #3b82f6;
             border-radius: 6px;
             max-width: 850px;
@@ -344,7 +326,7 @@
             color: #94a3b8;
         }
 
-        /* CONTACT SECTION */
+        /* CONTACT */
 
         .contact {
             background: #0f172a;
@@ -392,7 +374,7 @@
             }
 
             .nav-links {
-                gap: 15px;
+                gap: 12px;
             }
 
             .hero {
@@ -433,7 +415,6 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -459,9 +440,9 @@
 
                 <p class="hero-description">
                     Welcome to my game development portfolio.
-                    I am an independent developer working with
-                    C, C#, and Unity to explore gameplay programming,
-                    interactive mechanics, and game prototyping.
+                    I am an independent developer exploring
+                    Unity, C#, gameplay programming, interactive
+                    mechanics, and game prototyping.
                 </p>
 
                 <div class="button-group">
@@ -470,6 +451,7 @@
                         Explore My Projects
                     </a>
 
+                    <!-- Replace this URL with your GitHub profile -->
                     <a
                         class="button button-outline"
                         href="https://github.com/"
@@ -480,7 +462,6 @@
                     </a>
 
                 </div>
-
             </div>
         </section>
 
@@ -489,9 +470,7 @@
         <section class="section about" id="about">
             <div class="container">
 
-                <h2 class="section-title">
-                    About Me
-                </h2>
+                <h2 class="section-title">About Me</h2>
 
                 <p class="section-description">
                     My background, interests, and approach to
@@ -515,28 +494,25 @@
                     </p>
 
                     <p>
-                        I have developed independent game projects
-                        and prototypes while learning to implement
-                        gameplay systems, troubleshoot code, and
-                        improve my development workflow.
+                        I work on independent game projects and
+                        prototypes to develop my programming,
+                        debugging, and problem-solving skills.
                     </p>
 
                     <p>
-                        I am currently pursuing a Diploma in Game
-                        Development at Red Apple Learning.
-                        I am continuing to strengthen my programming
-                        fundamentals and practical development skills.
+                        I am pursuing a Bachelor of Arts in English
+                        Honours through IGNOU and studying game
+                        development at Red Apple Learning.
                     </p>
 
                     <p>
                         My long-term goal is to become a hybrid
-                        developer who can contribute to programming
-                        and collaborate across creative and technical
-                        disciplines in the game and software industries.
+                        developer who can contribute across
+                        programming and creative disciplines
+                        in the game industry.
                     </p>
 
                 </div>
-
             </div>
         </section>
 
@@ -545,9 +521,7 @@
         <section class="section" id="skills">
             <div class="container">
 
-                <h2 class="section-title">
-                    Technical Skills
-                </h2>
+                <h2 class="section-title">Technical Skills</h2>
 
                 <p class="section-description">
                     Programming languages, tools, and gameplay
@@ -558,17 +532,15 @@
 
                     <article class="skill-card">
                         <h3>C Programming</h3>
-
                         <p>
                             Programming fundamentals, variables,
-                            functions, control flow, and problem-solving
-                            practice.
+                            functions, control flow, and
+                            problem-solving practice.
                         </p>
                     </article>
 
                     <article class="skill-card">
                         <h3>C# Programming</h3>
-
                         <p>
                             Unity scripting, gameplay logic,
                             movement controls, and basic game systems.
@@ -577,7 +549,6 @@
 
                     <article class="skill-card">
                         <h3>Unity Engine</h3>
-
                         <p>
                             Game prototyping, scene setup,
                             components, prefabs, and gameplay
@@ -587,7 +558,6 @@
 
                     <article class="skill-card">
                         <h3>Gameplay Systems</h3>
-
                         <p>
                             Player movement, projectile shooting,
                             enemy health, collision handling,
@@ -597,20 +567,17 @@
 
                     <article class="skill-card">
                         <h3>AI Navigation</h3>
-
                         <p>
-                            Learning NavMesh concepts, navigation
-                            surfaces, pathfinding, and enemy
-                            movement behaviour.
+                            Learning NavMesh concepts,
+                            pathfinding, and enemy movement behaviour.
                         </p>
                     </article>
 
                     <article class="skill-card">
                         <h3>Visual Effects</h3>
-
                         <p>
                             Exploring Unity particle systems,
-                            existing VFX assets, animation,
+                            animation, existing VFX assets,
                             and visual presentation.
                         </p>
                     </article>
@@ -625,6 +592,8 @@
                     <span class="skill-tag">Gameplay Programming</span>
                     <span class="skill-tag">2D Games</span>
                     <span class="skill-tag">3D Game Fundamentals</span>
+                    <span class="skill-tag">Particle Systems</span>
+                    <span class="skill-tag">GitHub</span>
                 </div>
 
             </div>
@@ -635,19 +604,15 @@
         <section class="section projects" id="projects">
             <div class="container">
 
-                <h2 class="section-title">
-                    Featured Projects
-                </h2>
+                <h2 class="section-title">Featured Projects</h2>
 
                 <p class="section-description">
                     Independent games, gameplay experiments,
-                    and prototypes. Project pages and playable
-                    builds will be linked here as they become available.
+                    and prototypes. Replace the example links
+                    with your actual project pages.
                 </p>
 
                 <div class="project-grid">
-
-                    <!-- PROJECT 1 -->
 
                     <article class="project-card">
 
@@ -664,27 +629,26 @@
                         </p>
 
                         <p>
-                            The project provided experience in
-                            collaborative development and implementing
-                            gameplay ideas under time constraints.
+                            The project explored collaborative
+                            development and implementing gameplay
+                            ideas under time constraints.
                         </p>
 
                         <div class="project-tech">
                             Technology: Unity and C#
                         </div>
 
+                        <!-- Replace with your real project URL -->
                         <a
                             class="project-link"
                             href="https://itch.io/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Project page to be added
+                            Add Last Light Project Link
                         </a>
 
                     </article>
-
-                    <!-- PROJECT 2 -->
 
                     <article class="project-card">
 
@@ -695,33 +659,27 @@
                         <h3>Pikachu Climb</h3>
 
                         <p>
-                            A 2D climbing game prototype in which
-                            a character moves across different
-                            terrain, inspired by hill-climbing
-                            gameplay.
-                        </p>
-
-                        <p>
-                            The project explores character movement,
-                            terrain interaction, and 2D gameplay.
+                            A 2D climbing game prototype inspired
+                            by hill-climbing gameplay. The project
+                            explores character movement, terrain
+                            interaction, and 2D gameplay.
                         </p>
 
                         <div class="project-tech">
                             Technology: Unity and C#
                         </div>
 
+                        <!-- Replace with your real game page URL -->
                         <a
                             class="project-link"
                             href="https://itch.io/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Project page to be added
+                            Add Pikachu Climb Game Link
                         </a>
 
                     </article>
-
-                    <!-- PROJECT 3 -->
 
                     <article class="project-card">
 
@@ -734,7 +692,7 @@
                         <p>
                             A personal learning project inspired
                             by an existing spike-avoidance arcade
-                            game. Developed to practice gameplay
+                            game, developed to practice gameplay
                             implementation and game mechanics.
                         </p>
 
@@ -742,3 +700,147 @@
                             This is a learning project and is not
                             presented as an official release or
                             affiliation with the original developer.
+                        </p>
+
+                        <div class="project-tech">
+                            Technology: Unity and C#
+                        </div>
+
+                        <!-- Replace with your real project URL -->
+                        <a
+                            class="project-link"
+                            href="https://itch.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Add Project Link
+                        </a>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+
+        <section class="section education" id="education">
+            <div class="container">
+
+                <h2 class="section-title">Education</h2>
+
+                <p class="section-description">
+                    My academic background and professional training.
+                </p>
+
+                <article class="education-card">
+                    <h3>Bachelor of Arts — English Honours</h3>
+                    <p>
+                        Institution: Indira Gandhi National Open University (IGNOU)
+                    </p>
+                    <p>
+                        Status: Currently Pursuing
+                    </p>
+                </article>
+
+                <article class="education-card">
+                    <h3>Diploma in Game Development</h3>
+                    <p>
+                        Institution: Red Apple Learning
+                    </p>
+                    <p>
+                        Status: Update to your actual course status
+                    </p>
+                </article>
+
+                <article class="education-card">
+                    <h3>Class XII</h3>
+                    <p>
+                        Overall Result: 66%
+                    </p>
+                </article>
+
+                <article class="education-card">
+                    <h3>Class X</h3>
+                    <p>
+                        Board: National Institute of Open Schooling (NIOS)
+                    </p>
+                    <p>
+                        Overall Result: 41.2%
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+
+        <section class="section contact" id="contact">
+            <div class="container">
+
+                <h2 class="section-title">Contact</h2>
+
+                <p class="section-description">
+                    Get in touch regarding game development,
+                    collaboration, or professional opportunities.
+                </p>
+
+                <div class="contact-box">
+
+                    <p>
+                        <strong>Email:</strong>
+                        Replace with your professional email address
+                    </p>
+
+                    <p>
+                        <strong>GitHub:</strong>
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Add Your GitHub Profile
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>LinkedIn:</strong>
+                        <a
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Add Your LinkedIn Profile
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Game Portfolio:</strong>
+                        <a
+                            href="https://itch.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Add Your itch.io Profile
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Vauienlet Studios.
+                Independent Game Development Portfolio.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
